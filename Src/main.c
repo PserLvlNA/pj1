@@ -41,20 +41,7 @@
 #include "stm32f4xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-#include "tm_stm32_delay.h"
 
-// PA10 US1 Trigger
-#define US1_Trigger_Port GPIOA
-#define US1_Trigger_Pin  GPIO_PIN_8
-// PA9 US1 Echo
-#define US1_Echo_Port GPIOA
-#define US1_Echo_Pin  GPIO_PIN_9
-
-uint32_t us1_duration;
-uint32_t us1_distance;
-
-uint32_t raw_values[1024];
-uint32_t n = 0;
 
 /* USER CODE END Includes */
 
@@ -63,7 +50,6 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-	uint32_t time_copy;
 	uint32_t Distance;
 	uint32_t i,j;
 	uint8_t pdata[2];
@@ -129,7 +115,7 @@ int main(void)
   /* Init system clock for maximum system speed */
 
   	/* Init delay */
-  	TM_DELAY_Init();
+
 
   /* USER CODE END 2 */
 
@@ -170,17 +156,17 @@ int main(void)
 	  HAL_UART_Transmit(&huart2,pdata,1,1000);
 
 	  if(HAL_UART_Receive(&huart2,rdata,1,1000)==HAL_OK){
-		  if(rdata[0]=='0'){
+		  if(rdata[0]==(int)'1'){
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,1);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,0);
 		  }
-		  else if(rdata[0]=='3'){
+		  else if(rdata[0]==(int)'3'){
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,1);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,0);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,0);
 		  }
-		  else if(rdata[0]=='5'){
+		  else if(rdata[0]==(int)'5'){
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,1);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,0);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);
@@ -191,41 +177,6 @@ int main(void)
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);
 		  }
 	  }
-
-
-
-/*	  HAL_GPIO_WritePin(US1_Trigger_Port, US1_Trigger_Pin, SET);
-	      HAL_Delay(10);
-	      HAL_GPIO_WritePin(US1_Trigger_Port, US1_Trigger_Pin, RESET);
-
-	      uint8_t state;
-	      do
-	      {
-	        state = HAL_GPIO_ReadPin(US1_Echo_Port, US1_Echo_Pin);
-	      } while (state == RESET);
-	      uint32_t us1_start = HAL_GetTick();
-
-	      do
-	      {
-	        state = HAL_GPIO_ReadPin(US1_Echo_Port, US1_Echo_Pin);
-	      } while (state == SET);
-
-	      uint32_t us1_end = HAL_GetTick();
-	      us1_duration = us1_end - us1_start;
-
-	      us1_distance = (us1_duration / 2) / 29.1; // cm (?)
-	      raw_values[n] = us1_duration;
-
-	      n++;
-	      if (n == 1024)
-	      {
-	        break;
-	      }
-
-	      */
-
-
-
 
   /* USER CODE END WHILE */
 

@@ -23,8 +23,7 @@ Src/main.o: ../Src/main.c E:/LabEmbed/pj1/Inc/main.h \
  E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
  E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
- E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- E:/LabEmbed/pj1/Inc/tm_stm32_delay.h E:/LabEmbed/pj1/Inc/defines.h
+ E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
 E:/LabEmbed/pj1/Inc/main.h:
 
@@ -79,7 +78,3 @@ E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 
 E:/LabEmbed/pj1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-
-E:/LabEmbed/pj1/Inc/tm_stm32_delay.h:
-
-E:/LabEmbed/pj1/Inc/defines.h:

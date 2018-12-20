@@ -155,18 +155,19 @@ int main(void)
 
 	  HAL_UART_Transmit(&huart2,pdata,1,1000);
 
-	  if(HAL_UART_Receive(&huart2,rdata,1,1000)==HAL_OK){
-		  if(rdata[0]==(int)'1'){
+	  if(HAL_UART_Receive(&huart2,rdata,2,1000)==HAL_OK){
+		  int x = (int)rdata[0];
+		  if(x==0){
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,1);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,0);
 		  }
-		  else if(rdata[0]==(int)'3'){
+		  else if(x>=1 && x<=3){
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,1);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,0);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,0);
 		  }
-		  else if(rdata[0]==(int)'5'){
+		  else if(x>3){
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,1);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,0);
 			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);

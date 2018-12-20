@@ -9,12 +9,14 @@
 
 #define WIFI_SSID       "PserLvlNA"
 #define WIFI_PASSWORD   "ghosterhtd"
-#define FIREBASE_HOST "wio-link-d6bXX.firebaseio.com"
-#define FIREBASE_AUTH "qUohEtHyvCcOzgxq95ZheaVsaMePi2P5FDd8XXXX"
+#define FIREBASE_HOST "nodemcu-aa998.firebaseio.com"
+#define FIREBASE_AUTH "ioqefskzFZyoRxCytvGnYuyTbE06rbXtxvjAujob"
 
 const int ledPin = 14;
 int incomingByte = 0;
-int rdata = 0 ;
+int rdata = 99 ;
+String st="";
+const String deviceNumber = "nodemcu-aa998";
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -28,38 +30,22 @@ void setup() {
   Serial.println();
   Serial.print("connected: ");
   Serial.println(WiFi.localIP());
-  
   pinMode(ledPin, OUTPUT);
-
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-  Firebase.setInt("LED", 0);
-
-
-
 }
-
 void loop() {
+  if (incomingByte) st="Ready";
+  else st="Waiting";
+  Firebase.setString(deviceNumber+"/status", st);
+  rdata = (Firebase.getString(deviceNumber+"/number")).toInt();
   // put your main code here, to run repeatedly:
-  if (Serial.available() > 0) {
-    
-
+  if (Serial.available()) {  
     incomingByte = Serial.read(); // read the incoming byte:
-    if(incomingByte == 1){
-      
-      rdata = 0;
-     
-    }
-    else {
-      rdata = 3;
-    }
-
+    //rdata number
+    //incomingByte 0 empty, 1 using
     //Serial.print(incomingByte);
-
   }
-   Serial.print(rdata);
-  //Serial.write(rdata);
-  //digitalWrite(ledPin, Firebase.getInt("LED"));
+  Serial.println(Firebase.getString(deviceNumber+"/number"));
+  Serial.println(rdata);
   delay(500);
-
-
 }

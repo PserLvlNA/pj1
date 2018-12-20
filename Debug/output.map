@@ -3538,42 +3538,42 @@ LOAD e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-no
                 0x000003c3       0x22 e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(pj1.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xc341
+.debug_info     0x00000000     0xc358
  .debug_info    0x00000000     0x11d9 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_info    0x000011d9     0x1755 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_info    0x0000292e      0xf93 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_info    0x000038c1     0x125b Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_info    0x00004b1c     0x1f1a Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_info    0x00006a36     0x1e26 Src/main.o
- .debug_info    0x0000885c     0x146f Src/stm32f4xx_hal_msp.o
- .debug_info    0x00009ccb      0x97b Src/stm32f4xx_it.o
- .debug_info    0x0000a646      0xd29 Src/system_stm32f4xx.o
- .debug_info    0x0000b36f      0xfb0 Src/tm_stm32_delay.o
- .debug_info    0x0000c31f       0x22 startup/startup_stm32f407xx.o
+ .debug_info    0x00006a36     0x1e3d Src/main.o
+ .debug_info    0x00008873     0x146f Src/stm32f4xx_hal_msp.o
+ .debug_info    0x00009ce2      0x97b Src/stm32f4xx_it.o
+ .debug_info    0x0000a65d      0xd29 Src/system_stm32f4xx.o
+ .debug_info    0x0000b386      0xfb0 Src/tm_stm32_delay.o
+ .debug_info    0x0000c336       0x22 startup/startup_stm32f407xx.o
 
-.debug_abbrev   0x00000000     0x1c9e
+.debug_abbrev   0x00000000     0x1cad
  .debug_abbrev  0x00000000      0x2e5 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_abbrev  0x000002e5      0x3d6 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_abbrev  0x000006bb      0x2a7 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_abbrev  0x00000962      0x333 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_abbrev  0x00000c95      0x344 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_abbrev  0x00000fd9      0x305 Src/main.o
- .debug_abbrev  0x000012de      0x254 Src/stm32f4xx_hal_msp.o
- .debug_abbrev  0x00001532      0x1e0 Src/stm32f4xx_it.o
- .debug_abbrev  0x00001712      0x205 Src/system_stm32f4xx.o
- .debug_abbrev  0x00001917      0x375 Src/tm_stm32_delay.o
- .debug_abbrev  0x00001c8c       0x12 startup/startup_stm32f407xx.o
+ .debug_abbrev  0x00000fd9      0x314 Src/main.o
+ .debug_abbrev  0x000012ed      0x254 Src/stm32f4xx_hal_msp.o
+ .debug_abbrev  0x00001541      0x1e0 Src/stm32f4xx_it.o
+ .debug_abbrev  0x00001721      0x205 Src/system_stm32f4xx.o
+ .debug_abbrev  0x00001926      0x375 Src/tm_stm32_delay.o
+ .debug_abbrev  0x00001c9b       0x12 startup/startup_stm32f407xx.o
 
-.debug_loc      0x00000000     0x2868
+.debug_loc      0x00000000     0x289c
  .debug_loc     0x00000000       0xfd Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_loc     0x000000fd      0x5ce Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_loc     0x000006cb      0x469 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_loc     0x00000b34      0x3f1 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_loc     0x00000f25     0x158b Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_loc     0x000024b0       0x21 Src/main.o
- .debug_loc     0x000024d1       0x5b Src/stm32f4xx_hal_msp.o
- .debug_loc     0x0000252c      0x13e Src/system_stm32f4xx.o
- .debug_loc     0x0000266a      0x1fe Src/tm_stm32_delay.o
+ .debug_loc     0x000024b0       0x55 Src/main.o
+ .debug_loc     0x00002505       0x5b Src/stm32f4xx_hal_msp.o
+ .debug_loc     0x00002560      0x13e Src/system_stm32f4xx.o
+ .debug_loc     0x0000269e      0x1fe Src/tm_stm32_delay.o
 
 .debug_aranges  0x00000000      0x598
  .debug_aranges
@@ -3688,18 +3688,18 @@ OUTPUT(pj1.elf elf32-littlearm)
  .debug_macro   0x0002048b       0x29 Src/tm_stm32_delay.o
  .debug_macro   0x000204b4       0x32 Src/tm_stm32_delay.o
 
-.debug_line     0x00000000     0x5d50
+.debug_line     0x00000000     0x5d51
  .debug_line    0x00000000      0x929 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_line    0x00000929      0x984 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_line    0x000012ad      0x8cc Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_line    0x00001b79      0x9c0 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_line    0x00002539     0x1054 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_line    0x0000358d      0x839 Src/main.o
- .debug_line    0x00003dc6      0x77b Src/stm32f4xx_hal_msp.o
- .debug_line    0x00004541      0x74b Src/stm32f4xx_it.o
- .debug_line    0x00004c8c      0x770 Src/system_stm32f4xx.o
- .debug_line    0x000053fc      0x8d5 Src/tm_stm32_delay.o
- .debug_line    0x00005cd1       0x7f startup/startup_stm32f407xx.o
+ .debug_line    0x0000358d      0x83a Src/main.o
+ .debug_line    0x00003dc7      0x77b Src/stm32f4xx_hal_msp.o
+ .debug_line    0x00004542      0x74b Src/stm32f4xx_it.o
+ .debug_line    0x00004c8d      0x770 Src/system_stm32f4xx.o
+ .debug_line    0x000053fd      0x8d5 Src/tm_stm32_delay.o
+ .debug_line    0x00005cd2       0x7f startup/startup_stm32f407xx.o
 
 .debug_str      0x00000000    0xbd2c9
  .debug_str     0x00000000    0xbba42 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
@@ -3738,20 +3738,20 @@ OUTPUT(pj1.elf elf32-littlearm)
  .comment       0x0000007e       0x7f Src/system_stm32f4xx.o
  .comment       0x0000007e       0x7f Src/tm_stm32_delay.o
 
-.debug_frame    0x00000000      0xe94
+.debug_frame    0x00000000      0xe98
  .debug_frame   0x00000000      0x1cc Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
  .debug_frame   0x000001cc      0x15c Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .debug_frame   0x00000328       0xd8 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
  .debug_frame   0x00000400      0x184 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
  .debug_frame   0x00000584      0x4f0 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
- .debug_frame   0x00000a74       0xb4 Src/main.o
- .debug_frame   0x00000b28       0x64 Src/stm32f4xx_hal_msp.o
- .debug_frame   0x00000b8c       0x28 Src/stm32f4xx_it.o
- .debug_frame   0x00000bb4       0x30 Src/system_stm32f4xx.o
- .debug_frame   0x00000be4      0x104 Src/tm_stm32_delay.o
- .debug_frame   0x00000ce8       0xac e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00000d94       0x50 e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00000de4       0x24 e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x00000e08       0x2c e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00000e34       0x34 e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00000e68       0x2c e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000a74       0xb8 Src/main.o
+ .debug_frame   0x00000b2c       0x64 Src/stm32f4xx_hal_msp.o
+ .debug_frame   0x00000b90       0x28 Src/stm32f4xx_it.o
+ .debug_frame   0x00000bb8       0x30 Src/system_stm32f4xx.o
+ .debug_frame   0x00000be8      0x104 Src/tm_stm32_delay.o
+ .debug_frame   0x00000cec       0xac e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000d98       0x50 e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00000de8       0x24 e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x00000e0c       0x2c e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000e38       0x34 e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000e6c       0x2c e:/download/ac6/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)

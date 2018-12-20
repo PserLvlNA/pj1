@@ -66,7 +66,9 @@ UART_HandleTypeDef huart2;
 	uint32_t time_copy;
 	uint32_t Distance;
 	uint32_t i,j;
-	uint8_t pdata[1];
+	uint8_t pdata[2];
+	uint8_t rdata[2];
+	uint32_t all=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -154,18 +156,41 @@ int main(void)
 
 
 	  j=i;
-	  Distance = (float)j*0.0171821*2;
+	  Distance = (float)j*0.034*2;
 	  if(j>2000){
-		  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET);
-		  pdata[0]=0;
+		  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_SET);
+		  pdata[0]=1;
 
 	  }
 	  else {
-		  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_RESET);
-		  pdata[0]=1;
+		  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET);
+		  pdata[0]=0;
 	  }
 
 	  HAL_UART_Transmit(&huart2,pdata,1,1000);
+
+	  if(HAL_UART_Receive(&huart2,rdata,1,1000)==HAL_OK){
+		  if(rdata[0]=='0'){
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,1);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,0);
+		  }
+		  else if(rdata[0]=='3'){
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,1);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,0);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,0);
+		  }
+		  else if(rdata[0]=='5'){
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,1);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,0);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);
+		  }
+		  else{
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,0);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_14,0);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_15,0);
+		  }
+	  }
 
 
 
